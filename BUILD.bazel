@@ -1,0 +1,25 @@
+
+cc_library(
+	name = "lockfree",
+	visibility = ["//visibility:public"],
+	includes = [
+		"include/",
+	],
+	hdrs = glob([
+		"include/boost/**/*.hpp",
+		"include/boost/**/*.ipp",
+	]),
+	srcs = [
+	],
+	defines = [
+	],
+	deps = [
+		"@com_github_bazelboost_config//:config",
+		"@com_github_bazelboost_mpl//:mpl",
+		"@com_github_bazelboost_array//:array",
+		"@com_github_bazelboost_predef//:predef",
+		"@com_github_bazelboost_parameter//:parameter",
+		"@com_github_bazelboost_assert//:assert",
+		"@com_github_bazelboost_align//:align"
+	],
+)
